@@ -1,0 +1,291 @@
+body {
+    /* background-color: #010030; */
+    background-image: url(slanted-gradient.svg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center; 
+    margin: 0px;
+  }
+  
+#wrapper {
+  margin: 24px auto;
+  width: 100%;
+  
+  /* background-color: #010030; */
+}
+  
+  /* style for dummy columns, delete and replace with your own CSS */
+  .dummycolumn {
+    background-color: rgba(255,0,0,.25);
+    grid-column: span 1;
+  }
+  
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;  /* inner spacing */
+  margin: 0;           /* remove the 100px margin */
+  background: transparent; /* optional */
+  height: auto;        /* let content define height */
+  font-family: "Bebas Neue", sans-serif;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;     /* adjust size */
+  color: #CECCA8;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+
+
+
+header h1, nav {
+  margin: 0; /* Ensure no extra space from margins */
+  padding: 0;
+}
+
+
+
+
+
+
+nav{
+  grid-column: span 1;
+  display: grid;
+}
+
+nav ul {
+  list-style-type: none; /* none, disc, circle, square */
+  margin-top: 4%;
+}
+
+nav li {
+  display: inline-block;
+  width: auto;
+  margin: 5px;
+  color: #CECCA8;
+}
+nav li a {
+  color: #CECCA8;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  transition: all .5s;
+  
+}
+
+nav li a:hover{
+  transform: scale(1.1);
+  color: white;
+
+}
+  
+  
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  width: 1200px;
+  margin: 0 auto;            /* center main on the page */
+  justify-items: center;      /* center each grid item (like your galleries/headings) */
+}
+
+
+  main h1{
+    color: #CECCA8;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    grid-column: span 3;
+    margin: 10px;
+  }
+  
+  
+  footer{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    /* background-color: #010030; */
+    display: grid;
+    text-align: right;
+    padding-right: 20px;
+  }
+  
+  footer img{
+    padding: 10px;
+    width: 35%;
+  }
+  
+  footer ul{
+    list-style-type: none; /* none, disc, circle, square */
+    grid-column: span 1;
+    margin: 0px;
+  }
+  
+  footer li{
+    display: inline-block;
+    margin: 0px;
+  }
+  
+  footer a{
+    color: #010030;
+  }
+  
+  .youtube {
+    padding-bottom: 13px;
+  }
+  
+  footer a:visited{
+    color: #010030;
+  }
+  
+  footer a:hover{
+    color: #010030;
+  }
+  
+  .bi {
+    color: #CECCA8;
+    font-size: 22px; /* Adjust as needed */
+    display: inline-block;
+    padding: 5px;
+    opacity: 90%;
+    transition: all ease .3s;
+  }
+
+  .bi:hover {
+    transform: scale(1.1);
+    }
+
+
+  header a{ 
+    text-decoration: none;
+    color: #CECCA8;
+  }
+  
+  header a:visited{ 
+    text-decoration: none;
+    color: #CECCA8;
+  }
+  
+  header a:hover{ 
+    text-decoration: none;
+    color: #CECCA8;
+  }
+
+
+  
+  
+.scroll-container {
+  overflow-x: auto; 
+  white-space: nowrap; 
+  width: auto; 
+  height: auto; 
+  grid-column: span 3;
+}
+
+
+.scroll-gallery {
+  display: inline-flex; 
+  gap: 20px; 
+  
+}
+
+.scroll-gallery img {
+  height: 500px;
+  width: auto; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out; 
+  cursor: pointer; 
+}
+
+
+
+
+.scroll-gallery img:hover {
+  transform: scale(1.1); 
+}
+
+.scroll-container2 {
+  overflow-x: auto; 
+  white-space: nowrap; 
+  width: auto; 
+  height: auto; 
+  grid-column: span 3;
+
+}
+
+.scroll-gallery2 {
+  display: inline-flex; 
+  gap: 20px; 
+}
+
+.scroll-gallery2 img {
+  height: 500px;
+  width: auto; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out; 
+  cursor: pointer; 
+}
+
+
+
+
+.scroll-gallery2 img:hover {
+  transform: scale(1.1); 
+}
+  
+
+.scroll-container3 {
+  overflow-x: auto; 
+  white-space: nowrap; 
+  width: auto; 
+  height: auto; 
+  grid-column: span 3;
+
+}
+
+.scroll-gallery3 {
+  display: inline-flex; 
+  gap: 20px; 
+}
+
+.scroll-gallery3 img {
+  height: 500px;
+  width: auto; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out; 
+  cursor: pointer; 
+}
+
+
+
+
+.scroll-gallery3 img:hover {
+  transform: scale(1.1); 
+}
+
+
+
+.scroll-container,
+.scroll-container2,
+.scroll-container3 {
+  display: flex;              /* turn container into a flex row */
+  justify-content: center;    /* center the gallery block */
+  overflow-x: auto;           /* keep horizontal scroll if content is wider */
+  white-space: normal;        /* not needed when using flex */
+  width: 100%;
+}
+
+
+.scroll-gallery,
+.scroll-gallery2,
+.scroll-gallery3 {
+  display: flex;
+  gap: 20px;
+  flex: 0 0 auto;             /* don’t let it stretch/shrink; behaves like its own block */
+  align-items: center;
+}
