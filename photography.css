@@ -54,6 +54,7 @@ header h1, nav {
 
 
 
+
 nav{
   grid-column: span 1;
   display: grid;
@@ -288,4 +289,15 @@ main{
   gap: 20px;
   flex: 0 0 auto;             /* don’t let it stretch/shrink; behaves like its own block */
   align-items: center;
+}
+
+main p {
+  grid-column: 1 / -1;   /* span all 3 columns */
+  justify-self: center;  /* center the grid item */
+  max-width: 800px;      /* readable line length */
+  margin: 50px auto;     /* center the block */
+  text-align: center;    /* center the text */
+  font-family: "Bebas Neue", sans-serif;
+  color: #CECCA8;
+  font-size: 20px;
 }

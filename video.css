@@ -51,7 +51,16 @@ header h1, nav {
 }
 
 
-
+p {
+    font-family: "Bebas Neue", sans-serif;
+    color: #CECCA8;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
 
 
