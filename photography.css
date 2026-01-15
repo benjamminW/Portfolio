@@ -269,26 +269,66 @@ main{
   transform: scale(1.1); 
 }
 
+.scroll-container4 {
+  overflow-x: auto; 
+  white-space: nowrap; 
+  width: auto; 
+  height: auto; 
+  grid-column: span 3;
+
+}
+
+.scroll-gallery4 {
+  display: inline-flex; 
+  gap: 20px; 
+}
+
+.scroll-gallery4 img {
+  height: 500px;
+  width: auto; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out; 
+  cursor: pointer; 
+}
+
+
+
+
+.scroll-gallery4 img:hover {
+  transform: scale(1.1); 
+}
+
+.scroll-gallery4 a:first-child {
+  margin-left: 24px;
+}
+
+
+
 
 
 .scroll-container,
 .scroll-container2,
-.scroll-container3 {
-  display: flex;              /* turn container into a flex row */
-  justify-content: center;    /* center the gallery block */
-  overflow-x: auto;           /* keep horizontal scroll if content is wider */
-  white-space: normal;        /* not needed when using flex */
+.scroll-container3,
+.scroll-container4 {
+  display: block;           /* simpler */
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
+
 
 
 .scroll-gallery,
 .scroll-gallery2,
-.scroll-gallery3 {
+.scroll-gallery3,
+.scroll-gallery4  {
   display: flex;
   gap: 20px;
   flex: 0 0 auto;             /* don’t let it stretch/shrink; behaves like its own block */
   align-items: center;
+   padding: 0 24px;
 }
 
 main p {
