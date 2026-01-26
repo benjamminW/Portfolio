@@ -201,6 +201,27 @@ nav li a:hover{
   justify-content: center;  /* keep them grouped in the middle */
   gap: 20px;                 /* adjust spacing between them */
 }
+.video-container {
+  max-width: 900px;      /* choose what matches your layout */
+  margin: 0 auto 24px;   /* center it */
+  gap: 24px; 
+}
+
+/* Responsive 16:9 for iframes (YouTube) */
+.video-container iframe.videos {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  display: block;
+}
+
+/* Instagram blockquote: keep it centered and prevent weird extra margins */
+.video-container .instagram-media {
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 540px !important; /* Instagram’s embed max is usually ~540px */
+}
 
 
 
