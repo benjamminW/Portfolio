@@ -55,8 +55,8 @@ p {
     font-family: "Bebas Neue", sans-serif;
     color: #CECCA8;
     font-size: 20px;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -222,6 +222,7 @@ nav li a:hover{
   width: 100% !important;
   max-width: 540px !important; /* Instagram’s embed max is usually ~540px */
 }
+
 
 
 
