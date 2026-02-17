@@ -22,20 +22,23 @@ body {
   margin: 0 auto;
 }
 
-/* =============================
-   HEADER + NAV
-============================= */
+/* ---------- HEADER ---------- */
 
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 20px 40px;
+}
+.headerh1 {
+  grid-column: 2;
+  justify-self: center;
+  text-decoration: none;
 }
 
 header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 72px;
   letter-spacing: 2px;
   color: #CECCA8;
 }
@@ -43,6 +46,14 @@ header h1 {
 header a {
   text-decoration: none;
   color: #CECCA8;
+}
+
+
+/* ---------- NAV ---------- */
+
+nav {
+  grid-column: 3;
+  justify-self: end;
 }
 
 nav ul {
