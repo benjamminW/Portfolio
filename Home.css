@@ -28,7 +28,6 @@ body {
   background-image: url(slanted-gradient.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -91,7 +90,7 @@ main {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 40px;           
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -101,6 +100,8 @@ main h1 {
   grid-column: 1 / -1;
   text-align: center;
 }
+
+
 
 /* ---------- SECTION (Left Column) ---------- */
 
@@ -183,9 +184,10 @@ section {
 /* ---------- FOOTER ---------- */
 
 footer {
-  margin-top: 80px;
+  margin-top: 60px;
   padding: 0 40px 20px;
   text-align: right;
+    flex-shrink: 0;
 }
 
 footer ul {
@@ -220,11 +222,11 @@ footer li {
     padding-right: 24px;
   }
 
-header {
-  flex-direction: column;
-  gap: 16px;
-  text-align: center;
-}
+  header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
 
 nav ul {
   justify-content: center;
@@ -246,7 +248,4 @@ nav ul {
     margin: 20px auto;
   }
 
-  html, body {
-    overflow-x: hidden;
-  }
 }

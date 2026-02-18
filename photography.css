@@ -198,4 +198,20 @@ nav ul {
   html, body {
     overflow-x: hidden;
   }
+
+  .scroll-container {
+  overflow: visible;   /* remove horizontal scroll */
+  padding: 0;
+}
+
+.scroll-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.scroll-gallery img {
+  width: 100%;
+  height: auto;
+}
 }

@@ -11,20 +11,18 @@ body {
   background-image: url(slanted-gradient.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
+  background-attachment: fixed;
   font-family: "Bebas Neue", sans-serif;
   color: #CECCA8;
-  overflow-x: hidden;
 }
 
 #wrapper {
   width: 100%;
-  margin: 0 auto;
 }
 
 /* =============================
-   HEADER (MATCHES CONTACT PAGE)
+   HEADER
 ============================= */
 
 header {
@@ -38,6 +36,8 @@ header h1 {
   margin: 0;
   font-size: 64px;
   letter-spacing: 2px;
+  color: #CECCA8;
+   white-space: nowrap;
 }
 
 header a {
@@ -46,7 +46,7 @@ header a {
 }
 
 /* =============================
-   NAV (MATCHES CONTACT PAGE)
+   NAV
 ============================= */
 
 nav ul {
@@ -58,15 +58,9 @@ nav ul {
 }
 
 nav li a {
-  color: #CECCA8;
   text-decoration: none;
+  color: #CECCA8;
   font-size: 20px;
-  transition: 0.3s ease;
-}
-
-nav li a:hover {
-  color: white;
-  transform: scale(1.05);
 }
 
 /* =============================
@@ -88,70 +82,29 @@ main h1 {
    VIDEO SYSTEM
 ============================= */
 
-.video-row {
+/* Desktop Layout */
+.guilford,
+.video-row2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 640px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  justify-content: center;
   margin-bottom: 60px;
 }
 
-.video-row2 {
-  display: grid;
-  grid-template-columns: repeat(2, 640px);
-  gap: 40px;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto 60px;
-}
-
-.guilford {
-  display: grid;
-  grid-template-columns: repeat(2, 640px);
-  gap: 40px;
-  justify-content: center;
-  margin: 0 auto 60px;
-}
-
-.guilford .video-wrapper:nth-child(3) {
+.guilford .video-wrapper:last-child {
   grid-column: 1 / -1;
   justify-self: center;
-}
-
-.social-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  align-items: start;
-  max-width: 1400px;
-  margin: 0 auto 60px;
+  max-width: 700px;
 }
 
 .video-wrapper {
   width: 100%;
-  max-width: 650px;
   aspect-ratio: 16 / 9;
-  margin: 0 auto;
 }
 
 .video-wrapper iframe {
   width: 100%;
   height: 100%;
-  border: none;
-  display: block;
-}
-
-.instagram-media {
-  width: 100% !important;
-  max-width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
-  display: block !important;
-  margin: 0 !important;
-}
-
-.facebook-embed iframe {
-  width: 100%;
-  min-height: 600px;
   border: none;
   display: block;
 }
@@ -166,12 +119,22 @@ p {
   max-width: 900px;
   margin: 0 auto 60px;
   line-height: 1.6;
-  padding-top: 1em;
 }
 
-/* =============================
-   FOOTER
-============================= */
+.facebook-embed {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 9 / 16;  /* Facebook reels are vertical */
+  margin: 0 auto;
+}
+
+.facebook-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- FOOTER ---------- */
 
 footer {
   margin-top: 80px;
@@ -200,46 +163,72 @@ footer li {
   transform: scale(1.1);
 }
 
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+
+
+
 /* =============================
-   RESPONSIVE
+   MOBILE
 ============================= */
 
 @media (max-width: 768px) {
 
-  header,
-  main,
-  footer {
-    padding-left: 24px;
-    padding-right: 24px;
+  header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
   }
 
-header {
-  flex-direction: column;
-  gap: 16px;
-  text-align: center;
-}
-
-nav ul {
-  justify-content: center;
-  flex-direction: row;   /* keeps nav horizontal like contact */
-  gap: 24px;
-}
+  h1{ 
+    gap: 16px;
+  }
 
   main {
+    padding: 0 20px;
+  }
+
+    .guilford,
+  .video-row2,
+  .social-row {
     grid-template-columns: 1fr;
   }
 
-  aside {
-    order: -1;
+  /* FORCE VIDEO STACKING */
+  .guilford,
+  .video-row2 {
+    display: flex;           /* switch from grid to flex */
+    flex-direction: column;  /* stack vertically */
+    gap: 40px;
   }
 
-  .pic2 {
-    float: none;
-    display: block;
-    margin: 20px auto;
+  .video-wrapper {
+    width: 100%;
   }
 
-  html, body {
-    overflow-x: hidden;
+  body {
+    background-attachment: scroll;
   }
+
+
+    .social-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* ← THIS centers them */
+    gap: 40px;
+  }
+
+  .facebook-embed,
+  .instagram-media {
+    width: 100%;
+    max-width: 500px;      /* optional: keeps them from getting huge */
+    margin: 0 auto;
+  }
+
 }
+
