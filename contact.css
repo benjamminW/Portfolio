@@ -36,6 +36,8 @@ header h1 {
   margin: 0;
   font-size: 64px;
   letter-spacing: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;  
 }
 
 header a {
@@ -46,6 +48,12 @@ header a {
 /* =============================
    NAV
 ============================= */
+
+nav{ 
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 
 nav ul {
   list-style: none;

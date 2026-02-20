@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   font-family: "Bebas Neue", sans-serif;
   color: #CECCA8;
 }
@@ -37,7 +37,8 @@ header h1 {
   font-size: 64px;
   letter-spacing: 2px;
   color: #CECCA8;
-   white-space: nowrap;
+  white-space: nowrap;
+  flex-shrink: 0;  
 }
 
 header a {
@@ -48,6 +49,12 @@ header a {
 /* =============================
    NAV
 ============================= */
+
+nav{ 
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 
 nav ul {
   list-style: none;
