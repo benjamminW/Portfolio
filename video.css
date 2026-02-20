@@ -1,3 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Bebas Neue", sans-serif;
+  color: #CECCA8;
+}
+
+
+/* =============================
+   FULLSCREEN BACKGROUND FIX
+   (Mobile Safe)
+============================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url(slanted-gradient.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
 /* =============================
    GLOBAL
 ============================= */

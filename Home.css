@@ -1,4 +1,6 @@
-/* ---------- GLOBAL FIXES ---------- */
+/* =============================
+   GLOBAL RESET
+============================= */
 
 *,
 *::before,
@@ -6,40 +8,45 @@
   box-sizing: border-box;
 }
 
-aside p {
-  overflow-wrap: break-word;
-}
-
-main > * {
-  min-width: 0;
-}
-
-img,
-iframe {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ---------- GLOBAL ---------- */
-
+html,
 body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* =============================
+   FULLSCREEN BACKGROUND FIX
+   (Mobile Safe)
+============================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url(slanted-gradient.svg);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: "Bebas Neue", sans-serif;
-  min-height: 100vh;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* =============================
+   LAYOUT WRAPPER
+============================= */
+
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 #wrapper {
-  width: 100%;
-    flex: 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* =============================
@@ -59,7 +66,7 @@ header h1 {
   letter-spacing: 2px;
   color: #CECCA8;
   white-space: nowrap;
-  flex-shrink: 0;  
+  flex-shrink: 0;
 }
 
 header a {
@@ -71,7 +78,7 @@ header a {
    NAV
 ============================= */
 
-nav{ 
+nav {
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -97,14 +104,15 @@ nav li a:hover {
   transform: scale(1.05);
 }
 
-
-/* ---------- MAIN LAYOUT ---------- */
+/* =============================
+   MAIN GRID
+============================= */
 
 main {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;           
+  padding: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -115,14 +123,9 @@ main h1 {
   text-align: center;
 }
 
-
-html {
-  height: 100%;
-}
-
-
-
-/* ---------- SECTION (Left Column) ---------- */
+/* =============================
+   SECTION
+============================= */
 
 section {
   display: flex;
@@ -149,7 +152,16 @@ section h1 a:hover {
   transform: scale(1.05);
 }
 
-/* ---------- IMAGES / VIDEO ---------- */
+/* =============================
+   IMAGES / VIDEO
+============================= */
+
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 .pic1 {
   width: 100%;
@@ -161,7 +173,26 @@ section h1 a:hover {
   float: right;
 }
 
-/* ---------- ASIDE (Right Column) ---------- */
+/* =============================
+   VIDEO WRAPPER
+============================= */
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* =============================
+   ASIDE
+============================= */
 
 aside {
   width: 100%;
@@ -172,35 +203,12 @@ aside p {
   font-size: clamp(16px, 2vw, 22px);
   letter-spacing: 1px;
   line-height: 1.4;
+  overflow-wrap: break-word;
 }
 
-/* ---------- VIDEO STYLING ---------- */
-
-/* Make section use full grid width when needed */
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Video container */
-.video-wrapper {
-  width: 100%;
-  max-width: 1000px;   /* controls how big the video gets */
-  margin: 0 auto;
-}
-
-/* YouTube iframe */
-.video-wrapper iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border: 0;
-  border-radius: 12px;
-  display: block;
-}
-
-/* ---------- FOOTER ---------- */
+/* =============================
+   FOOTER
+============================= */
 
 footer {
   margin-top: auto;
@@ -229,7 +237,9 @@ footer li {
   transform: scale(1.1);
 }
 
-/* ---------- MOBILE ---------- */
+/* =============================
+   MOBILE
+============================= */
 
 @media (max-width: 768px) {
 
@@ -246,11 +256,10 @@ footer li {
     text-align: center;
   }
 
-nav ul {
-  justify-content: center;
-  flex-direction: row;   /* keeps nav horizontal like contact */
-  gap: 24px;
-}
+  nav ul {
+    justify-content: center;
+    gap: 24px;
+  }
 
   main {
     grid-template-columns: 1fr;
