@@ -6,12 +6,12 @@
   box-sizing: border-box;
 }
 
-main > * {
-  min-width: 0;
-}
-
 aside p {
   overflow-wrap: break-word;
+}
+
+main > * {
+  min-width: 0;
 }
 
 img,
@@ -30,10 +30,16 @@ body {
   background-size: cover;
   background-position: center;
   font-family: "Bebas Neue", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #wrapper {
   width: 100%;
+    flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* =============================
@@ -107,6 +113,11 @@ main {
 main h1 {
   grid-column: 1 / -1;
   text-align: center;
+}
+
+
+html {
+  height: 100%;
 }
 
 
@@ -192,10 +203,9 @@ section {
 /* ---------- FOOTER ---------- */
 
 footer {
-  margin-top: 60px;
+  margin-top: auto;
   padding: 0 40px 20px;
   text-align: right;
-    flex-shrink: 0;
 }
 
 footer ul {
