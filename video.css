@@ -206,6 +206,12 @@ footer li {
     padding: 0 20px;
   }
 
+  nav ul {
+  justify-content: center;
+  flex-direction: row;   /* keeps nav horizontal like contact */
+  gap: 24px;
+}
+
     .guilford,
   .video-row2,
   .social-row {
